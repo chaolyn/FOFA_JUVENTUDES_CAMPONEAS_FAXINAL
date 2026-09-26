@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d31">
+  <meta name="description" content="Uma apresentação interativa da análise FOFA da comunidade Faxinal Papanduva de Baixo.">
+  <title>Análise FOFA — Faxinal Papanduva de Baixo</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topbar" aria-label="Navegação da apresentação">
+    <a class="brand" href="#abertura" aria-label="Voltar à abertura">
+      <svg aria-hidden="true" viewBox="0 0 40 40">
+        <path d="M20 34C10 29 7 20 9 8c9 1 15 6 17 14M20 34c0-9 4-17 12-22 3 11-1 19-12 22Z"/>
+        <path d="M20 34c-1-9-4-15-9-20m9 20c2-7 5-12 10-16"/>
+      </svg>
+      <span>FOFA <small>Papanduva de Baixo</small></span>
+    </a>
+
+    <nav class="chapter-nav" aria-label="Seções">
+      <a href="#abertura" data-section="abertura"><span>01</span><b>Abertura</b></a>
+      <a href="#matriz" data-section="matriz"><span>02</span><b>Matriz</b></a>
+      <a href="#encerramento" data-section="encerramento"><span>03</span><b>Encerramento</b></a>
+    </nav>
+
+    <div class="progress-track" aria-hidden="true"><span></span></div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section-watch" id="abertura" aria-labelledby="titulo-principal">
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Comunidade • natureza • futuro</p>
+        <h1 id="titulo-principal">
+          <span>Análise FOFA</span>
+          <strong>Faxinal Papanduva<br>de Baixo</strong>
+        </h1>
+        <p class="hero-intro">Um olhar sobre a comunidade, seus desafios e seus caminhos para o futuro.</p>
+        <a class="primary-button" href="#matriz">
+          Explorar a análise
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-scene" aria-hidden="true">
+        <svg viewBox="0 0 900 760" role="img">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#bcd7dc"/>
+              <stop offset="1" stop-color="#edf0df"/>
+            </linearGradient>
+            <pattern id="field-lines" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(25)">
+              <path d="M0 3h28" stroke="#f7efd2" stroke-opacity=".25" stroke-width="2"/>
+            </pattern>
+          </defs>
+          <path class="sky-shape" d="M100 38C249-13 532 2 703 102c153 90 188 302 126 441C762 694 526 765 302 713 76 661-47 489 17 290 48 194 45 57 100 38Z" fill="url(#sky)"/>
+          <g class="cloud cloud-one" fill="#fff9e9" opacity=".88">
+            <path d="M135 175c7-24 27-38 48-28 14-28 59-20 62 13 28-5 45 12 48 31H126c-12-1-9-14 9-16Z"/>
+          </g>
+          <g class="cloud cloud-two" fill="#fff9e9" opacity=".72">
+            <path d="M548 119c5-19 23-30 40-22 10-23 46-17 50 9 22-4 36 9 38 25H541c-10-1-7-11 7-12Z"/>
+          </g>
+          <circle cx="718" cy="214" r="54" fill="#e9af54" opacity=".95"/>
+          <path d="M3 473C159 368 279 429 416 365c163-77 329-9 478 72v319H8Z" fill="#729970"/>
+          <path d="M0 536c181-99 338-58 454-7 134 59 267-14 446-35v266H0Z" fill="#426f58"/>
+          <path d="M0 615c157-56 319-26 463 38 157 70 284 3 437-43v150H0Z" fill="#254d3e"/>
+          <path d="M0 536c181-99 338-58 454-7 134 59 267-14 446-35v266H0Z" fill="url(#field-lines)"/>
+          <path class="road" d="M441 760c-49-83-33-143 62-190 52-26 66-48 58-87 43 50 36 90-36 127-80 41-82 91-38 150Z" fill="#d9bd85"/>
+          <g class="house" transform="translate(555 365)">
+            <path d="M0 58 69 3l74 55v96H0Z" fill="#f3e6c6"/>
+            <path d="m-12 62 81-65 87 65-12 16L69 20 0 78Z" fill="#8d503b"/>
+            <path d="M55 93h35v61H55Z" fill="#7d4938"/>
+            <path d="M13 84h27v28H13zm91 0h27v28h-27Z" fill="#78aab1"/>
+            <path d="M106 23V-8h18v45" fill="#87503b"/>
+          </g>
+          <g class="trees" stroke="#173d31" stroke-linecap="round">
+            <path d="M183 524v-91m0 28-26-28m26 10 29-34" stroke-width="7"/>
+            <g fill="#315f49" stroke="none">
+              <ellipse cx="153" cy="418" rx="39" ry="51"/>
+              <ellipse cx="198" cy="393" rx="44" ry="62"/>
+              <ellipse cx="225" cy="435" rx="32" ry="47"/>
+            </g>
+          </g>
+          <g class="fence" stroke="#d8bd85" stroke-width="8" stroke-linecap="round">
+            <path d="M629 612v93m89-115v92m86-112v93M615 642l205-42m-205 75 205-43"/>
+          </g>
+          <g class="foreground-leaves" fill="none" stroke="#b6c97d" stroke-width="7" stroke-linecap="round">
+            <path d="M91 742c7-78 31-132 73-169m-45 106c-31-17-45-40-42-67m62 29c27-13 43-35 47-62"/>
+            <path d="M782 749c-6-75-26-124-61-158m41 98c31-15 45-37 42-64m-63 27c-25-12-39-30-43-55"/>
+          </g>
+        </svg>
+        <p class="scene-note"><span></span> Uma leitura coletiva do presente para imaginar o amanhã.</p>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true"><span></span> role para descobrir</div>
+    </section>
+
+    <section class="matrix-section section-watch" id="matriz" aria-labelledby="matriz-titulo">
+      <div class="section-shell wide-shell">
+        <header class="matrix-heading reveal">
+          <div>
+            <p class="section-kicker light">02 — Matriz interativa</p>
+            <h2 id="matriz-titulo">O território visto<br><em>por quatro ângulos.</em></h2>
+          </div>
+          <p>Selecione cada ponto para entender por que ele faz parte daquele grupo.</p>
+        </header>
+
+        <div class="matrix-legend reveal" aria-label="Legenda da matriz">
+          <span><i class="legend-internal"></i> Ambiente interno</span>
+          <span><i class="legend-external"></i> Ambiente externo</span>
+          <span><i class="legend-positive"></i> Aspecto favorável</span>
+          <span><i class="legend-challenge"></i> Aspecto desafiador</span>
+        </div>
+
+        <div class="swot-grid">
+          <article class="quadrant quadrant-force reveal" data-group="force">
+            <header class="quadrant-header">
+              <div class="quadrant-icon">
+                <svg aria-hidden="true" viewBox="0 0 48 48"><path d="M24 42V23m0 6C13 27 9 20 10 9c11 0 18 7 14 20Zm0 5c10-2 16-8 16-18-10 0-16 6-16 18Z"/></svg>
+              </div>
+              <div><p>Interno • favorável</p><h3>Forças</h3></div>
+              <span class="point-count"><strong>4</strong> pontos</span>
+            </header>
+            <p class="quadrant-description">O que a comunidade já preserva, valoriza e realiza.</p>
+            <div class="point-list">
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="force-1">
+                  <span class="point-number">01</span><span class="point-title">Preservação dos costumes e das tradições da comunidade.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="force-1" hidden><p>É uma força porque representa um valor que já existe dentro da comunidade e ajuda a preservar sua história.</p></div>
+              </div>
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="force-2">
+                  <span class="point-number">02</span><span class="point-title">Presença da natureza.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="force-2" hidden><p>É uma qualidade interna reconhecida, o faxinal possui 3 salttos naturais como exemplo</p></div>
+              </div>
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="force-3">
+                  <span class="point-number">03</span><span class="point-title">Serviços comunitários realizados pela associação.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="force-3" hidden><p>É uma capacidade já presente de realizar ações voltadas à comunidade.</p></div>
+              </div>
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="force-4">
+                  <span class="point-number">04</span><span class="point-title">Presença de pequenos agricultores e fortalecimento da agricultura familiar.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="force-4" hidden><p>É uma força ligada à presença dos pequenos agricultores e à valorização da agricultura familiar.</p></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="quadrant quadrant-weakness reveal" data-group="weakness">
+            <header class="quadrant-header">
+              <div class="quadrant-icon">
+                <svg aria-hidden="true" viewBox="0 0 48 48"><path d="M6 40V18m12 22V14m12 26V18m12 22V14M3 24l42-8M3 35l42-8"/></svg>
+              </div>
+              <div><p>Interno • desafiador</p><h3>Fraquezas</h3></div>
+              <span class="point-count"><strong>5</strong> pontos</span>
+            </header>
+            <p class="quadrant-description">O que depende de organização, cuidado e melhoria interna.</p>
+            <div class="point-list">
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="weakness-1">
+                  <span class="point-number">01</span><span class="point-title">Falta de organização da comunidade.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="weakness-1" hidden><p>É uma fraqueza porque a organização é uma questão construída dentro da própria comunidade.</p></div>
+              </div>
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="weakness-2">
+                  <span class="point-number">02</span><span class="point-title">Desunião entre os moradores.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="weakness-2" hidden><p>É um desafio interno que afeta a participação e a construção coletiva.</p></div>
+              </div>
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="weakness-3">
+                  <span class="point-number">03</span><span class="point-title">Ausência de cercas em determinadas áreas, permitindo que as criações entrem em propriedades vizinhas.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="weakness-3" hidden><p>É uma questão interna de cuidado com os limites entre determinadas propriedades.</p></div>
+              </div>
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="weakness-4">
+                  <span class="point-number">04</span><span class="point-title">Dificuldades de acesso e deslocamento relacionadas às condições da estrada.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="weakness-4" hidden><p>É uma fraqueza porque as condições da estrada dificultam o acesso e o deslocamento.</p></div>
+              </div>
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="weakness-5">
+                  <span class="point-number">05</span><span class="point-title">Necessidade de ampliar a conscientização sobre os cuidados ambientais.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="weakness-5" hidden><p>É um ponto que pode melhorar por meio de mais atenção e conscientização dentro da comunidade.</p></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="quadrant quadrant-opportunity reveal" data-group="opportunity">
+            <header class="quadrant-header">
+              <div class="quadrant-icon">
+                <svg aria-hidden="true" viewBox="0 0 48 48"><path d="M24 42V6M9 19c9 0 15 5 15 14C15 33 9 28 9 19Zm30-6c-9 0-15 5-15 14 9 0 15-5 15-14Z"/><path d="M7 42h34"/></svg>
+              </div>
+              <div><p>Externo • favorável</p><h3>Oportunidades</h3></div>
+              <span class="point-count"><strong>5</strong> pontos</span>
+            </header>
+            <p class="quadrant-description">Possibilidades que podem apoiar o desenvolvimento futuro.</p>
+            <div class="point-list">
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="opportunity-1">
+                  <span class="point-number">01</span><span class="point-title">Incentivos e programas de apoio aos pequenos agricultores.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="opportunity-1" hidden><p>É uma oportunidade porque apoios e incentivos podem favorecer os pequenos agricultores.</p></div>
+              </div>
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="opportunity-2">
+                  <span class="point-number">02</span><span class="point-title">Melhorias na infraestrutura de água e saneamento.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="opportunity-2" hidden><p>É uma possibilidade de desenvolvimento que pode melhorar a infraestrutura da comunidade.</p></div>
+              </div>
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="opportunity-3">
+                  <span class="point-number">03</span><span class="point-title">Possibilidade de implantação de uma linha de ônibus ligando o Faxinal à cidade, facilitando o deslocamento dos moradores.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="opportunity-3" hidden><p>É uma oportunidade porque pode facilitar a ligação do Faxinal com a cidade e o deslocamento dos moradores.</p></div>
+              </div>
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="opportunity-4">
+                  <span class="point-number">04</span><span class="point-title">Desenvolvimento de ações de educação ambiental.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="opportunity-4" hidden><p>É um caminho possível para ampliar conhecimentos e cuidados com o ambiente.</p></div>
+              </div>
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="opportunity-5">
+                  <span class="point-number">05</span><span class="point-title">Criação de projetos para fortalecer a associação e aumentar a participação da comunidade.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="opportunity-5" hidden><p>É uma oportunidade de transformar organização e participação em projetos futuros.</p></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="quadrant quadrant-threat reveal" data-group="threat">
+            <header class="quadrant-header">
+              <div class="quadrant-icon">
+                <svg aria-hidden="true" viewBox="0 0 48 48"><path d="M24 5 44 41H4L24 5Z"/><path d="M24 17v12m0 6v1"/></svg>
+              </div>
+              <div><p>Externo • desafiador</p><h3>Ameaças</h3></div>
+              <span class="point-count"><strong>4</strong> pontos</span>
+            </header>
+            <p class="quadrant-description">Riscos que podem enfraquecer a comunidade e seu ambiente.</p>
+            <div class="point-list">
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="threat-1">
+                  <span class="point-number">01</span><span class="point-title">Saída de moradores para viver na cidade, provocando o abandono e o enfraquecimento da comunidade.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="threat-1" hidden><p>É uma ameaça porque a saída de moradores pode reduzir a presença e a continuidade da comunidade.</p></div>
+              </div>
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="threat-2">
+                  <span class="point-number">02</span><span class="point-title">Aumento do uso de agrotóxicos.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="threat-2" hidden><p>É um risco crescente que exige atenção pelos possíveis impactos associados.</p></div>
+              </div>
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="threat-3">
+                  <span class="point-number">03</span><span class="point-title">Possível avanço do desmatamento e seus impactos futuros sobre a natureza e a comunidade.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="threat-3" hidden><p>É uma ameaça porque o possível avanço do desmatamento pode afetar futuramente a natureza e a comunidade.</p></div>
+              </div>
+              <div class="point-card">
+                <button type="button" aria-expanded="false" aria-controls="threat-4">
+                  <span class="point-number">04</span><span class="point-title">Possíveis danos ao solo, à água, à natureza e à saúde dos moradores.</span><span class="plus" aria-hidden="true"></span>
+                </button>
+                <div class="point-detail" id="threat-4" hidden><p>É uma ameaça porque pode afetar tanto o ambiente quanto a saúde dos moradores.</p></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="matrix-hint reveal"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 12V8a2 2 0 0 1 4 0v3-5a2 2 0 0 1 4 0v5-2a2 2 0 0 1 4 0v6c0 4-3 7-7 7h-1c-3 0-5-2-7-5l-2-3a2 2 0 0 1 3-3l2 1Z"/></svg> Toque ou pressione Enter em um cartão para abrir seu detalhe.</p>
+      </div>
+    </section>
+
+    <section class="closing section-watch" id="encerramento" aria-labelledby="encerramento-titulo">
+      <div class="closing-sun" aria-hidden="true"></div>
+      <div class="closing-landscape" aria-hidden="true">
+        <svg viewBox="0 0 1600 520" preserveAspectRatio="none">
+          <path d="M0 245c262-79 441-50 623 28 192 83 360 56 513-6 180-73 312-70 464-12v265H0Z" fill="#426f58"/>
+          <path d="M0 344c206-51 384-22 569 54 226 93 457 6 620-39 159-44 284-30 411 19v142H0Z" fill="#173d31"/>
+          <path d="M745 520c-31-58-15-103 74-137 49-19 71-40 67-73 36 41 24 76-43 105-61 27-64 62-47 105Z" fill="#c7a86c" opacity=".8"/>
+        </svg>
+      </div>
+      <div class="closing-copy reveal">
+        <p class="section-kicker light">03 — Encerramento</p>
+        <h2 id="encerramento-titulo">Conhecer as forças e os desafios da comunidade é o primeiro passo para <em>preservar sua história</em> e construir novos caminhos.</h2>
+        <a href="#abertura">Recomeçar a jornada <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg></a>
+      </div>
+      <footer>
+        <p>Análise FOFA — Faxinal Papanduva de Baixo</p>
+        <p>Preservação • participação • futuro coletivo</p>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
